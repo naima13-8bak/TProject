@@ -19,9 +19,11 @@ if(isset($_POST['submit'])){
 
       $row = mysqli_fetch_array($result);
          $_SESSION['nom'] = $row['nom'];
+         $_SESSION['id'] = $row['id'];
          $_SESSION['prenom'] = $row['prenom'];
+         $_SESSION['image'] = $row['image'];
          $_SESSION['email'] = $row['email'];
-         header('location:admin/admin_page.php');
+         header('location:admin/static/admin_page.php');
 
 
    }else{
